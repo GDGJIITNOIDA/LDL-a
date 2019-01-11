@@ -1,5 +1,6 @@
 package com.example.fd.ldl;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,10 +20,14 @@ public class RegisterationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registeration);
         setUI();
-        regBtn.setOnClickListener(new View.OnClickListener() {
+
+
+
+        goBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(RegisterationActivity.this, LogInActivity.class));
+                RegisterationActivity.this.finish();
 
             }
         });
