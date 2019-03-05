@@ -15,14 +15,10 @@ import static android.graphics.Color.rgb;
 public class IntroScreen extends AppCompatActivity {
 
     private ViewPager iSlot;
-
     private Button donateButton;
-
     private Button logInButton;
     private LinearLayout iDot;
-
     private SliderAdapter sliderAdapter;
-
     private TextView[] mDOt;
 
 
@@ -35,7 +31,6 @@ public class IntroScreen extends AppCompatActivity {
         sliderAdapter= new SliderAdapter(this);
         donateButton= (Button) findViewById(R.id.DonateButton);
         logInButton= findViewById(R.id.LogInButton);
-
 
         logInButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,10 +46,7 @@ public class IntroScreen extends AppCompatActivity {
                 debugToast();
             }
         });
-
-
         iSlot.setAdapter(sliderAdapter);
-
     }
     void debugToast()
     {

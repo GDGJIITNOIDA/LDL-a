@@ -21,7 +21,7 @@
         android:layout_marginBottom="230dp"
         android:ems="10"
         android:hint="Email Address"
-        android:inputType="textEmailAddress"
+        android:inputType="text"
         android:textColor="#ffffff" />
 
     <EditText
@@ -33,7 +33,7 @@
         android:layout_marginBottom="168dp"
         android:ems="10"
         android:hint="Password"
-        android:inputType="numberPassword" />
+        android:inputType="text" />
 
     <Button
         android:id="@+id/button"
@@ -67,7 +67,6 @@
         android:layout_marginTop="-1dp"
         android:layout_marginEnd="-267dp"
         android:layout_toStartOf="@+id/textView"
-
         android:text="New User? Sign Up" />
 
 
