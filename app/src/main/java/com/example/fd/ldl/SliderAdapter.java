@@ -20,39 +20,17 @@ public class SliderAdapter extends PagerAdapter {
 
     public SliderAdapter(Context context)
     {
-
         this.context=context;
     }
 
     public int[] slide_images = {
 //change for intro slides
-        R.drawable.ic_donate,
-        R.drawable.ic_camps,
-        R.drawable.ic_home
-
+        R.drawable.bg1, R.drawable.bg2, R.drawable.bg3,R.drawable.bg4
     };
-
-    public  String[] slide_text = {
-
-            "DONATE TO OUR CAUSE",
-            "CAMPS",
-            "HOME"
-    };
-
-    public  String[] slide_extra_text = {
-
-            "BANK INFO etc",
-            "CAMPS",
-            "HOME"
-    };
-
-
 
     @Override
     public int getCount() {
-
-
-        return slide_text.length;
+        return slide_images.length;
     }
 
     @Override
@@ -65,34 +43,18 @@ public class SliderAdapter extends PagerAdapter {
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
 
         layoutInflater= (LayoutInflater)  context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-
         View view= layoutInflater.inflate(R.layout.slider_lay, container, false);
-
         ImageView slideImageView = (ImageView) view.findViewById(R.id.slide_image);
-
-        TextView  slideHeadView = (TextView)  view.findViewById(R.id.slide_head);
-
-        TextView  slideText = (TextView)  view.findViewById((R.id.slide_extra_text));
-
         slideImageView.setImageResource(slide_images[position]);
 
-        slideHeadView.setText(slide_text[position]);
-
-        slideText.setText(slide_extra_text[position]);
-
-
         container.addView(view);
-
 
         return view;
     };
 
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-
         container.removeView((RelativeLayout)object);
-
-
     }
 }
 

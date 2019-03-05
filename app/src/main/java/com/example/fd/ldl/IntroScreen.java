@@ -32,11 +32,7 @@ public class IntroScreen extends AppCompatActivity {
         setContentView(R.layout.activity_intro_screen);
 
         iSlot= (ViewPager) findViewById(R.id.viewPager);
-
-
-
         sliderAdapter= new SliderAdapter(this);
-
         donateButton= (Button) findViewById(R.id.DonateButton);
         logInButton= findViewById(R.id.LogInButton);
 
@@ -44,29 +40,20 @@ public class IntroScreen extends AppCompatActivity {
         logInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 startActivity(new Intent(IntroScreen.this, LogInActivity.class));
                 IntroScreen.this.finish();
-
             }
         });
 
        donateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 debugToast();
-
             }
         });
 
 
         iSlot.setAdapter(sliderAdapter);
-
-
-
-
-
 
     }
     void debugToast()

@@ -28,14 +28,7 @@ public class LogInActivity extends AppCompatActivity {
 
             }
         });
-
-
-
-
     }
-
-
-
     void debugToast()
     {
        Toast.makeText(this,"Click", Toast.LENGTH_LONG).show();
