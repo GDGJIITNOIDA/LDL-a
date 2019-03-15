@@ -11,7 +11,8 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddCityActivity"></activity>
+        <activity android:name=".AddCollegeActivity"></activity>
+        <activity android:name=".AddCityActivity" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
