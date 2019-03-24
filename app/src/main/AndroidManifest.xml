@@ -13,6 +13,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".AddCollegeActivity"></activity>
         <activity android:name=".AddCityActivity" />
+        <activity android:name=".MemberActivity"/>
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />

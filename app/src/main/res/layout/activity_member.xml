@@ -15,7 +15,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
             android:layout_marginTop="1dp"
             android:orientation="horizontal">
 
@@ -27,6 +27,7 @@
                 android:layout_weight="0.5"
                 android:text="First Name"
                 android:textSize="15dp"
+                android:paddingTop="9dp"
                 android:singleLine="true"
                 />
 
@@ -37,6 +38,8 @@
                 android:layout_marginRight="34dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="0.8"
+                android:paddingTop="9dp"
+                android:paddingEnd="9dp"
                 android:paddingBottom="1dp" />
 
         </LinearLayout>
@@ -371,9 +374,11 @@
                 android:textSize="15dp" />
 
 
-            <DatePicker
+            <TextView
+                android:id="@+id/dJoin"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:text="======"
                 android:layout_marginRight="34dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="0.8"
@@ -396,8 +401,10 @@
             android:textSize="15dp" />
 
 
-        <DatePicker
+        <TextView
+            android:id="@+id/dDOB"
             android:layout_width="0dp"
+            android:text="======"
             android:layout_height="wrap_content"
             android:layout_marginRight="34dp"
             android:layout_marginBottom="10dp"
