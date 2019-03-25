@@ -14,6 +14,7 @@
         <activity android:name=".AddTeamActivity"></activity>
         <activity android:name=".AddCollegeActivity" />
         <activity android:name=".AddCityActivity" />
+        <activity android:name=".MemberActivity"/>
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />

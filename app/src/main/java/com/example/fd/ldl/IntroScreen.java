@@ -24,6 +24,7 @@ public class IntroScreen<timer, sTimer> extends AppCompatActivity {
     private LinearLayout iDot;
     private SliderAdapter sliderAdapter;
     private TextView[] mDOt;
+    private Button dBug;
     int currentPage = 0;
     Timer timer;
     final long DELAY_MS = 300;//delay in milliseconds before task is to be executed
@@ -39,7 +40,7 @@ public class IntroScreen<timer, sTimer> extends AppCompatActivity {
         sliderAdapter= new SliderAdapter(this);
         donateButton= (Button) findViewById(R.id.DonateButton);
         logInButton= findViewById(R.id.LogInButton);
-
+        dBug= findViewById(R.id.newsFeed);
         final Handler handler = new Handler();
         final Runnable Update = new Runnable() {
             public void run() {
@@ -63,6 +64,14 @@ public class IntroScreen<timer, sTimer> extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(IntroScreen.this, LogInActivity.class));
+                IntroScreen.this.finish();
+            }
+        });
+
+        dBug.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(IntroScreen.this, MemberActivity.class));
                 IntroScreen.this.finish();
             }
         });
