@@ -23,7 +23,7 @@ public class BottomSheetCity extends BottomSheetDialogFragment {
         btnDelhi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mListener.onButtonClicked("Delhi Clicked");
+               // mListener.onButtonClicked("Delhi Clicked");
                 dismiss();
             }
         });
@@ -31,7 +31,7 @@ public class BottomSheetCity extends BottomSheetDialogFragment {
         btnNoida.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mListener.onButtonClicked("Noida Clicked");
+                // mListener.onButtonClicked("Noida Clicked");
                 dismiss();
             }
         });
@@ -39,22 +39,20 @@ public class BottomSheetCity extends BottomSheetDialogFragment {
         return v;
     }
 
+
     public interface BottomSheetListener {
-        void onButtonClicked (String text);
-
-
+        void onButtonClicked(String text);
     }
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-
-        try{
-        mListener = (BottomSheetListener) context;}
-        catch (ClassCastException e){
-            throw new ClassCastException(context.toString()
-            + " must implement BottomSheetListener");
-        }
-
-    }
+//    @Override
+//    public void onAttach(Context context) {
+//        super.onAttach(context);
+//
+//        try {
+//            mListener = (BottomSheetListener) context;
+//        } catch (ClassCastException e) {
+//            throw new ClassCastException(context.toString() + " must implement BottomSheetListener");
+//        }
+//
+//    }
 }

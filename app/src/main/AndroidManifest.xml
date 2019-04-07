@@ -12,12 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".AddCollegeActivity"></activity>
+
+        <activity android:name=".MemberActivity"></activity>
+
         <activity android:name=".AddCityActivity" />
-        <activity
-            android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".MainActivity"
+                android:theme="@style/AppTheme.NoActionBar" />
+
         <activity android:name=".LogInActivity" />
+
         <activity android:name=".RegisterationActivity" />
+
         <activity
             android:name=".SplashScreen"
             android:theme="@style/AppTheme.NoActionBar">
@@ -27,7 +33,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".IntroScreen" />
+
+        <activity android:name=".IntroScreen" > </activity>
     </application>
 
 </manifest>

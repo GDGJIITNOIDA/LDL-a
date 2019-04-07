@@ -64,7 +64,7 @@ public class LogInActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(retrofit2.Call<User> call, Response<User> response) {
                         Log.i("dsf","post: "+response.body().toString());
-                        Toast.makeText(LogInActivity.this, response.body().toString(), Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(LogInActivity.this, response.body().toString(), Toast.LENGTH_SHORT).show();
                         User u = response.body();
 //                        SharedPreferences.Editor editor = sharedPreferences.edit();
 //                        editor.putString("token",u.getToken());
@@ -87,6 +87,9 @@ public class LogInActivity extends AppCompatActivity {
                         user.setUsername(u.getUsername());
                         Log.i("dsf","post token: "+u.getToken());
                         User.setAsCurrentUser(LogInActivity.this, user);
+
+                        Intent i=new Intent(LogInActivity.this,MainActivity.class);
+                        startActivity(i);
                     }
 
                     @Override

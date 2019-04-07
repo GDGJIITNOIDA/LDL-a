@@ -20,9 +20,10 @@
             android:layout_marginStart="40dp"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="10dp"
-            android:text="Name"
+            android:text="City"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="@color/colorDarkGrey"/>
 
         <EditText
             android:id="@+id/etName"
@@ -52,9 +53,10 @@
             android:layout_marginStart="40dp"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="10dp"
-            android:text="City"
+            android:text="State"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="@color/colorDarkGrey"/>
 
         <EditText
             android:id="@+id/etCity"

@@ -7,11 +7,11 @@
     android:orientation="vertical"
     android:padding="@dimen/fab_margin"
     tools:context=".MemberActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -20,24 +20,25 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tvFirstName"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="60dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:text="First Name"
-                android:textSize="15dp"
-                android:singleLine="true"
-                />
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                android:textSize="15sp" />
 
 
             <EditText
+                android:id="@+id/etFirstName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="34dp"
-                android:layout_marginBottom="10dp"
+                android:ems="10"
                 android:layout_weight="0.8"
-                android:paddingBottom="1dp" />
+                android:textSize="15sp"
+                android:hint="Please enter your first name"
+                android:inputType="textPersonName" />
 
         </LinearLayout>
 
@@ -48,22 +49,25 @@
             android:paddingTop="0dp">
 
             <TextView
+                android:id="@+id/tvLastName"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="60dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:text="Last Name"
-                android:singleLine="true"
-                android:textSize="15dp" />
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                android:textSize="15sp" />
 
 
             <EditText
+                android:id="@+id/etLastName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="34dp"
-                android:layout_marginBottom="10dp"
-                android:layout_weight="0.8" />
+                android:ems="10"
+                android:layout_weight="0.8"
+                android:textSize="15sp"
+                android:hint="Please enter your last name"
+                android:inputType="textPersonName" />
 
         </LinearLayout>
 
@@ -74,22 +78,25 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tvUserName"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="60dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:text="User Name"
-                android:singleLine="true"
-                android:textSize="15dp" />
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                android:textSize="15sp" />
 
 
             <EditText
+                android:id="@+id/etUserName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="34dp"
-                android:layout_marginBottom="10dp"
-                android:layout_weight="0.8" />
+                android:ems="10"
+                android:layout_weight="0.8"
+                android:textSize="15sp"
+                android:hint="Please enter your last name"
+                android:inputType="textPersonName" />
 
         </LinearLayout>
 
@@ -100,22 +107,25 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tvEmail"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="60dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:text="Email Address: "
-                android:singleLine="true"
-                android:textSize="15dp" />
+                android:text="Email"
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                android:textSize="15sp" />
 
 
             <EditText
+                android:id="@+id/etEmail"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="34dp"
-                android:layout_marginBottom="10dp"
-                android:layout_weight="0.8" />
+                android:ems="10"
+                android:layout_weight="0.8"
+                android:textSize="15sp"
+                android:hint="Please enter your email"
+                android:inputType="textPersonName" />
 
         </LinearLayout>
 
@@ -126,22 +136,25 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tvPassword"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="60dp"
-                android:singleLine="true"
+                android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:text="Password"
-                android:textSize="15dp" />
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                android:textSize="15sp" />
 
 
             <EditText
+                android:id="@+id/etPassword"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="34dp"
-                android:layout_marginBottom="10dp"
-                android:layout_weight="0.8" />
+                android:ems="10"
+                android:layout_weight="0.8"
+                android:textSize="15sp"
+                android:hint="Please enter your password "
+                android:inputType="textPersonName" />
 
         </LinearLayout>
         <LinearLayout
@@ -151,22 +164,25 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tvConfirmPassword"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="60dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:text="Confirm Password"
-                android:singleLine="true"
-                android:textSize="15dp" />
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                android:textSize="15sp" />
 
 
             <EditText
+                android:id="@+id/etConfirmPassword"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="34dp"
-                android:layout_marginBottom="10dp"
-                android:layout_weight="0.8" />
+                android:ems="10"
+                android:layout_weight="0.8"
+                android:textSize="15sp"
+                android:hint="Re-enter your password"
+                android:inputType="textPersonName" />
 
         </LinearLayout>
         <LinearLayout
@@ -176,22 +192,25 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tvLdlId"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="60dp"
-                android:singleLine="true"
+                android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:text="LDL ID"
-                android:textSize="15dp" />
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                android:textSize="15sp" />
 
 
             <EditText
+                android:id="@+id/etLDLId"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="34dp"
-                android:layout_marginBottom="10dp"
-                android:layout_weight="0.8" />
+                android:ems="10"
+                android:layout_weight="0.8"
+                android:textSize="15sp"
+                android:hint="Please enter your LDL ID"
+                android:inputType="textPersonName" />
 
         </LinearLayout>
         <LinearLayout
@@ -200,23 +219,26 @@
         android:layout_marginTop="0dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="60dp"
-            android:layout_weight="0.5"
-            android:text="Profession: "
-            android:singleLine="true"
-            android:textSize="15dp" />
+            <TextView
+                android:id="@+id/tvProfession"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Profession"
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                android:textSize="15sp" />
 
 
-        <EditText
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="34dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="0.8" />
+            <EditText
+                android:id="@+id/etProfession"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_weight="0.8"
+                android:textSize="15sp"
+                android:hint="Please enter your profession"
+                android:inputType="textPersonName" />
 
     </LinearLayout>
         <LinearLayout
@@ -225,15 +247,16 @@
             android:layout_marginTop="0dp"
             android:orientation="horizontal">
 
+
             <TextView
+                android:id="@+id/tvTeam"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="60dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:text="Team"
-                android:singleLine="true"
-                android:textSize="15dp" />
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                android:textSize="15sp" />
 
 
             <Button
@@ -253,14 +276,14 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tvCollege"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="60dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:text="College"
-                android:singleLine="true"
-                android:textSize="15dp" />
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                android:textSize="15sp" />
 
             <Button
                 android:id="@+id/btn_colg"
@@ -280,14 +303,14 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/Role"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="60dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:text="Role"
-                android:singleLine="true"
-                android:textSize="15dp" />
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                android:textSize="15sp" />
 
             <Button
                 android:id="@+id/btn_role"
@@ -307,14 +330,14 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tvDay"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="60dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:text="Day"
-                android:singleLine="true"
-                android:textSize="15dp" />
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                android:textSize="15sp" />
 
             <Button
                 android:id="@+id/btn_day"
@@ -335,23 +358,25 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tvMobile"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="60dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:singleLine="true"
                 android:text="Mobile No."
-                android:textSize="15dp" />
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                android:textSize="15sp" />
 
 
             <EditText
+                android:id="@+id/etMobile"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="34dp"
-                android:layout_marginBottom="10dp"
+                android:ems="10"
                 android:layout_weight="0.8"
-                android:paddingBottom="1dp" />
+                android:textSize="15sp"
+                android:hint="Please enter your mobile no."
+                android:inputType="textPersonName" />
 
         </LinearLayout>
         <LinearLayout
@@ -361,14 +386,14 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tvJoined"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="60dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:text="Joined"
-                android:singleLine="true"
-                android:textSize="15dp" />
+                android:text="First Name"
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                android:textSize="15sp" />
 
 
             <DatePicker
@@ -379,21 +404,23 @@
                 android:layout_weight="0.8"
                 android:paddingBottom="1dp" />
 
-        </LinearLayout> <LinearLayout
+        </LinearLayout>
+
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="1dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="60dp"
-            android:layout_weight="0.5"
-            android:text="DOB"
-            android:singleLine="true"
-            android:textSize="15dp" />
+            <TextView
+                android:id="@+id/tvDOB"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="DOB"
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                android:textSize="15sp" />
 
 
         <DatePicker
@@ -412,24 +439,40 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tvTurns"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="60dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:text="Turns"
-                android:textSize="15dp" />
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                android:textSize="15sp" />
 
 
             <EditText
+                android:id="@+id/etTurns"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="34dp"
-                android:layout_marginBottom="10dp"
+                android:ems="10"
                 android:layout_weight="0.8"
-                android:paddingBottom="1dp" />
+                android:textSize="15sp"
+                android:hint="Please enter number of turns"
+                android:inputType="textPersonName" />
 
         </LinearLayout>
+
+        <Button
+            android:id="@+id/btnAddMember"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginBottom="50dp"
+            android:text="Add Member"
+            android:background="@drawable/button_rounded"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
     </LinearLayout>
 
 </ScrollView>

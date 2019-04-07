@@ -10,7 +10,7 @@ public class MemberActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_member);
+        setContentView(R.layout.fragment_add_member);
 
         Button bsTeam = findViewById(R.id.btn_team);
         Button bsCollege= findViewById(R.id.btn_colg);
