@@ -11,38 +11,38 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 public class BottomSheetCity extends BottomSheetDialogFragment {
-    private BottomSheetListener mListener;
+    //private BottomSheetListener mListener;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.bottom_sheet_city, container, false);
-        Button btnDelhi = v.findViewById(R.id.btnDelhi);
-        Button btnNoida = v.findViewById(R.id.btnNoida);
-
-        btnDelhi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-               // mListener.onButtonClicked("Delhi Clicked");
-                dismiss();
-            }
-        });
-
-        btnNoida.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // mListener.onButtonClicked("Noida Clicked");
-                dismiss();
-            }
-        });
+//        Button btnDelhi = v.findViewById(R.id.btnDelhi);
+//        Button btnNoida = v.findViewById(R.id.btnNoida);
+//
+//        btnDelhi.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//               // mListener.onButtonClicked("Delhi Clicked");
+//                dismiss();
+//            }
+//        });
+//
+//        btnNoida.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                // mListener.onButtonClicked("Noida Clicked");
+//                dismiss();
+//            }
+//        });
 
         return v;
     }
 
 
-    public interface BottomSheetListener {
-        void onButtonClicked(String text);
-    }
+//    public interface BottomSheetListener {
+//        void onButtonClicked(String text);
+//    }
 
 //    @Override
 //    public void onAttach(Context context) {

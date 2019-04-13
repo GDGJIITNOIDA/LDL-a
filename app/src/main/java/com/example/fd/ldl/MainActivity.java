@@ -13,19 +13,19 @@ import android.widget.ExpandableListView;
 import android.widget.Toast;
 
 import com.example.fd.ldl.Adapter.ExpandableListAdapter;
-import com.example.fd.ldl.Fragments_and_BottomSheets.AddCamp;
-import com.example.fd.ldl.Fragments_and_BottomSheets.AddCity;
-import com.example.fd.ldl.Fragments_and_BottomSheets.AddCollege;
-import com.example.fd.ldl.Fragments_and_BottomSheets.AddTeam;
-import com.example.fd.ldl.Fragments_and_BottomSheets.ViewCamps;
-import com.example.fd.ldl.Fragments_and_BottomSheets.ViewCities;
-import com.example.fd.ldl.Fragments_and_BottomSheets.ViewColleges;
-import com.example.fd.ldl.Fragments_and_BottomSheets.ViewTeam;
+import com.example.fd.ldl.Fragments.AddCampFragment;
+import com.example.fd.ldl.Fragments.AddCityFragment;
+import com.example.fd.ldl.Fragments.AddCollegeFragment;
+import com.example.fd.ldl.Fragments.AddTeamFragment;
+import com.example.fd.ldl.Fragments.ViewCampsFragment;
+import com.example.fd.ldl.Fragments.ViewCitiesFragment;
+import com.example.fd.ldl.Fragments.ViewCollegesFragment;
+import com.example.fd.ldl.Fragments.ViewTeamFragment;
 import com.example.fd.ldl.Model.ExpandedMenuModel;
-import com.example.fd.ldl.Fragments_and_BottomSheets.AddAttendance;
-import com.example.fd.ldl.Fragments_and_BottomSheets.AddMember;
-import com.example.fd.ldl.Fragments_and_BottomSheets.FetchAttendance;
-import com.example.fd.ldl.Fragments_and_BottomSheets.ViewMember;
+import com.example.fd.ldl.Fragments.AddAttendanceFragment;
+import com.example.fd.ldl.Fragments.AddMemberFragment;
+import com.example.fd.ldl.Fragments.FetchAttendanceFragment;
+import com.example.fd.ldl.Fragments.ViewMemberFrgment;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -149,11 +149,11 @@ public class MainActivity extends AppCompatActivity {
                         switch (childPosition) {
                             case 0:
                                 Toast.makeText(MainActivity.this, "k", Toast.LENGTH_SHORT).show();
-                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AddAttendance()).commit();
+                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AddAttendanceFragment()).commit();
                                 break;
                             case 1:
                                 Toast.makeText(MainActivity.this, "l", Toast.LENGTH_SHORT).show();
-                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FetchAttendance()).commit();
+                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FetchAttendanceFragment()).commit();
                                 break;
                             default:
                                 break;
@@ -162,10 +162,10 @@ public class MainActivity extends AppCompatActivity {
                     case 1:
                         switch (childPosition) {
                             case 0:
-                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AddMember()).commit();
+                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AddMemberFragment()).commit();
                                 break;
                             case 1:
-                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ViewMember()).commit();
+                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ViewMemberFrgment()).commit();
                                 break;
 
                             default:
@@ -178,16 +178,16 @@ public class MainActivity extends AppCompatActivity {
                         switch (childPosition) {
 
                             case 0:
-                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AddCity()).commit();
+                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AddCityFragment()).commit();
                                 break;
                             case 1:
-                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AddCollege()).commit();
+                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AddCollegeFragment()).commit();
                                 break;
                             case 2:
-                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AddCamp()).commit();
+                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AddCampFragment()).commit();
                                 break;
                             case 3:
-                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AddTeam()).commit();
+                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AddTeamFragment()).commit();
                                 break;
                             default:
                                 break;
@@ -198,16 +198,16 @@ public class MainActivity extends AppCompatActivity {
                         switch (childPosition) {
 
                             case 0:
-                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ViewCities()).commit();
+                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ViewCitiesFragment()).commit();
                                 break;
                             case 1:
-                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ViewColleges()).commit();
+                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ViewCollegesFragment()).commit();
                                 break;
                             case 2:
-                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ViewCamps()).commit();
+                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ViewCampsFragment()).commit();
                                 break;
                             case 3:
-                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ViewTeam()).commit();
+                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ViewTeamFragment()).commit();
                                 break;
                             default:
                                 break;

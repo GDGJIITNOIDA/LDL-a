@@ -157,7 +157,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
@@ -172,13 +172,19 @@
             android:textSize="14sp" />
 
         <EditText
-            android:id="@+id/tvCity"
+            android:id="@+id/etCity"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_weight="0.8"
             android:hint="Please choose city"
-            android:textSize="18sp" />
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:id="@+id/imgViewEdit"
+            android:src="@drawable/ic_edit_"/>
     </LinearLayout>
 
     <Button

@@ -20,7 +20,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="230dp"
         android:ems="10"
-        android:hint="User NAme"
+        android:hint="User Nme"
         android:inputType="text"
         android:textColor="#000000" />
 

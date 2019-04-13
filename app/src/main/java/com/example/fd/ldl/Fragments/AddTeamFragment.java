@@ -1,4 +1,4 @@
-package com.example.fd.ldl.Fragments_and_BottomSheets;
+package com.example.fd.ldl.Fragments;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,12 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class ViewCamps extends Fragment {
+import com.example.fd.ldl.R;
+
+public class AddTeamFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        //return  inflater.inflate(R.layout.fragment_lead_opportunities,container,false);
-        return null;
-
+        return  inflater.inflate(R.layout.fragment_add_team,container,false);
     }
 }

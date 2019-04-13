@@ -13,17 +13,17 @@ public class AddCityActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_add_city);
 
-        EditText etName, etCity;
-        Button btnSaveCity;
-        etName = findViewById(R.id.etName);
-        etCity = findViewById(R.id.etCity);
-        btnSaveCity = findViewById(R.id.btnSaveCity);
-
-        btnSaveCity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
+//        EditText etName, etCity;
+//        Button btnSaveCity;
+//        etName = findViewById(R.id.etName);
+//        etCity = findViewById(R.id.etCity);
+//        btnSaveCity = findViewById(R.id.btnSaveCity);
+//
+//        btnSaveCity.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//            }
+//        });
     }
 }

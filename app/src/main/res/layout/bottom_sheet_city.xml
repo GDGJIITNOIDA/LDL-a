@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:gravity="center_horizontal"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
 
 
     <TextView
@@ -16,29 +21,18 @@
         android:text="Please select the city"
         android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/btnDelhi"
+    <ListView
+        android:id="@+id/city_listView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
+        android:layout_height="160dp"
+        android:choiceMode="singleChoice"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="100dp"
-        android:background="@drawable/button_rounded"
-        android:text="Delhi"
-        android:textColor="@color/white"
-        android:textStyle="bold" />
-
+        android:layout_marginBottom="20dp"/>
 
     <Button
-        android:id="@+id/btnNoida"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="100dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/button_rounded"
-        android:text="Noida"
-        android:textColor="@color/white"
-        android:textStyle="bold" />
+        android:text="Cancel"
+        android:background="@drawable/rectangle_white_curve"
+        android:id="@+id/btnCancel"/>
 </LinearLayout>

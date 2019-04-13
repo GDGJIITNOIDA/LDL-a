@@ -1,4 +1,4 @@
-package com.example.fd.ldl.Fragments_and_BottomSheets;
+package com.example.fd.ldl.Fragments;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,12 +10,11 @@ import android.view.ViewGroup;
 
 import com.example.fd.ldl.R;
 
-public class ViewColleges extends Fragment {
+
+public class FetchAttendanceFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        //return  inflater.inflate(R.layout.fragment_lead_opportunities,container,false);
-        return null;
-
+        return  inflater.inflate(R.layout.fragment_fetch_attendance,container,false);
     }
 }

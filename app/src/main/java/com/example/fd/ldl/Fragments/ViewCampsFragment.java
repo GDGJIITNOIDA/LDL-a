@@ -1,4 +1,4 @@
-package com.example.fd.ldl.Fragments_and_BottomSheets;
+package com.example.fd.ldl.Fragments;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,9 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.fd.ldl.R;
-
-public class AddTeam extends Fragment {
+public class ViewCampsFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

@@ -1,4 +1,4 @@
-package com.example.fd.ldl.Fragments_and_BottomSheets;
+package com.example.fd.ldl.Fragments;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -16,7 +16,7 @@ import com.example.fd.ldl.BottomSheetRole;
 import com.example.fd.ldl.BottomSheetTeam;
 import com.example.fd.ldl.R;
 
-public class AddMember extends Fragment {
+public class AddMemberFragment extends Fragment {
     View rootView;
 
     @Nullable

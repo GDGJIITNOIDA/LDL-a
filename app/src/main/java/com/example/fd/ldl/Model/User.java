@@ -11,11 +11,11 @@ public class User {
                     public static final String USER_ID = "User Id";
                     public static final String TOKEN = "token";
                     public static final String FIRSTNAME = "first_name";
-                    public static final String EMAIL = "token";
-                    public static final String USERNAME = "token";
-                    public static final String ROLE = "token";
-                    public static final String LASTNAME = "token";
-                    public static final String PASSWORD = "token";
+                    public static final String EMAIL = "email";
+                    public static final String USERNAME = "user_name";
+                    public static final String ROLE = "role";
+                    public static final String LASTNAME = "last_name";
+                    public static final String PASSWORD = "password";
 
 
         @SerializedName("token")

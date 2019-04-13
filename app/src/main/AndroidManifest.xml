@@ -19,7 +19,9 @@
         <activity android:name=".MainActivity"
                   android:theme="@style/AppTheme.NoActionBar" />
 
-        <activity android:name=".LogInActivity" />
+        <activity android:name=".LogInActivity"
+                  android:windowSoftInputMode="adjustPan"
+            />
         <activity android:name=".RegisterationActivity" />
 
         <activity android:name=".SplashScreen"
