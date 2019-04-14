@@ -54,7 +54,7 @@ public class AddCityFragment extends Fragment {
         if (cityName.equals("")) {
             Toast.makeText(getContext(), "Please Enter City Name", Toast.LENGTH_SHORT).show();
         } else if (state.equals("")) {
-            Toast.makeText(getContext(), "Plaese Enter State", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "Please Enter State", Toast.LENGTH_SHORT).show();
         } else {
             LDLService api = ApiClient.getApi().create(LDLService.class);
             //retrofit2.Call<City> call = api.addCity("token 87bbfbdad99f95ae5362bd95fcda586e07458694",city);

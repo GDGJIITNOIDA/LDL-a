@@ -88,11 +88,11 @@ public class AddCampFragment extends Fragment  {
         if (campName.equals("")) {
             Toast.makeText(getContext(), "Please Enter Camp Name", Toast.LENGTH_SHORT).show();
         } else if (location.equals("")) {
-            Toast.makeText(getContext(), "Plaese Enter Location", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "Please Enter Location", Toast.LENGTH_SHORT).show();
         } else if (started.equals("")) {
-            Toast.makeText(getContext(), "Plaese Enter date", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "Please Enter date", Toast.LENGTH_SHORT).show();
         } else if (city.equals("")) {
-            Toast.makeText(getContext(), "Plaese Enter City", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "Please Enter City", Toast.LENGTH_SHORT).show();
         } else {
             LDLService api = ApiClient.getApi().create(LDLService.class);
             retrofit2.Call<Camp> call = api.addCamp("token " + User.getCurrentUser(getContext()).getToken(), camp);
