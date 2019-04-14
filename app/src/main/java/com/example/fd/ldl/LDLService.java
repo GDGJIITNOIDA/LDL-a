@@ -1,7 +1,9 @@
 package com.example.fd.ldl;
 
 
+import com.example.fd.ldl.Model.Camp;
 import com.example.fd.ldl.Model.City;
+import com.example.fd.ldl.Model.College;
 import com.example.fd.ldl.Model.User;
 
 import java.util.ArrayList;
@@ -23,5 +25,23 @@ public interface LDLService {
 
     @POST("api/city")
     Call<City>addCity(@Header("Authorization")String token,@Body City city);
+
+    @GET("api/college")
+    Call<ArrayList<College>> getCollege();
+
+    @POST("api/college")
+    Call<College> addCollege(@Header("Authorization")String token,@Body College college);
+
+    @GET("api/camp")
+    Call<ArrayList<City>> getCamp();
+
+    @POST("api/camp")
+    Call<Camp> addCamp(@Header("Authorization")String token, @Body Camp camp);
+
+    @GET("api/team")
+    Call<ArrayList<City>> getTeam();
+
+    @POST("api/team")
+    Call<City> addTeam(@Header("Authorization")String token);
 
 }

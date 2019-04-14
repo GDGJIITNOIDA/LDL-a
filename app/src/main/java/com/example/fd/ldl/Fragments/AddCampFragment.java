@@ -14,14 +14,18 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.fd.ldl.BottomSheetCity;
 import com.example.fd.ldl.LDLService;
+import com.example.fd.ldl.Model.Camp;
 import com.example.fd.ldl.Model.City;
+import com.example.fd.ldl.Model.User;
 import com.example.fd.ldl.R;
 import com.example.fd.ldl.utils.retrofit.ApiClient;
 
@@ -32,12 +36,15 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class AddCampFragment extends Fragment  {
-    private EditText etCity;
+    private EditText etCity, etCampName, etLocation, etStarted;
     Button btnSave ;
+    CheckBox cbCampName;
     ImageView imgViewEdit;
     BottomSheetDialog dialog;
     ArrayAdapter list_adapter;
     String[] cityname;
+    String campName, location, started, city;
+    boolean isActive;
 
     @Nullable
     @Override
@@ -50,10 +57,19 @@ public class AddCampFragment extends Fragment  {
 
         fetch_city();
 
+
+
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+               campName = etCampName.getText().toString();
+               location = etLocation.getText().toString();
+               started = etStarted.getText().toString();
+               city = etCity.getText().toString();
+               isActive = cbCampName.isChecked();
 
+               Camp camp = new Camp(campName,location,isActive,started);
+               addCamp(camp);
             }
         });
 
@@ -65,6 +81,41 @@ public class AddCampFragment extends Fragment  {
             }
         });
         return  rootView;
+    }
+
+    private void addCamp(Camp camp) {
+
+        if (campName.equals("")) {
+            Toast.makeText(getContext(), "Please Enter Camp Name", Toast.LENGTH_SHORT).show();
+        } else if (location.equals("")) {
+            Toast.makeText(getContext(), "Plaese Enter Location", Toast.LENGTH_SHORT).show();
+        } else if (started.equals("")) {
+            Toast.makeText(getContext(), "Plaese Enter date", Toast.LENGTH_SHORT).show();
+        } else if (city.equals("")) {
+            Toast.makeText(getContext(), "Plaese Enter City", Toast.LENGTH_SHORT).show();
+        } else {
+            LDLService api = ApiClient.getApi().create(LDLService.class);
+            retrofit2.Call<Camp> call = api.addCamp("token " + User.getCurrentUser(getContext()).getToken(), camp);
+            call.enqueue(new Callback<Camp>() {
+                @Override
+                public void onResponse(Call<Camp> call, Response<Camp> response) {
+                    Log.i("dsf", "post camp: " + response.code());
+                    if (response.code() == 201) {
+                        Toast.makeText(getContext(), "Camp Added Successfully", Toast.LENGTH_SHORT).show();
+                    } else if (response.code() == 400) {
+                        Toast.makeText(getContext(), "Camp with this name already exists", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<Camp> call, Throwable t) {
+                    Log.i("dsf", " post error: " + t);
+
+                }
+            });
+            Toast.makeText(getContext(), "ok", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     private void fetch_city() {
