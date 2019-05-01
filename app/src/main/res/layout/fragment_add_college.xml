@@ -116,7 +116,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnSaveCity"
+        android:id="@+id/btnSaveCollege"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginRight="100dp"

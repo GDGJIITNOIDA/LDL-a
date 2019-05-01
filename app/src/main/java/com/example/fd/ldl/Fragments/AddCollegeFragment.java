@@ -23,9 +23,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.fd.ldl.LDLService;
 import com.example.fd.ldl.Model.City;
+import com.example.fd.ldl.Model.College;
+import com.example.fd.ldl.Model.User;
 import com.example.fd.ldl.R;
 import com.example.fd.ldl.utils.retrofit.ApiClient;
 
@@ -39,8 +42,10 @@ public class AddCollegeFragment extends Fragment {
     Context context;
     EditText etCollegeName,etAddress,etCity;
     ImageView imgViewEdit;
+    Button btnSaveCollege;
     ArrayAdapter list_adapter;
     String[] cityname;
+    String collegeName, address, city;
     BottomSheetDialog dialog;
 
     @SuppressLint("ClickableViewAccessibility")
@@ -57,6 +62,18 @@ public class AddCollegeFragment extends Fragment {
 
         fetch_city();
 
+        btnSaveCollege.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                collegeName = etCollegeName.getText().toString();
+                address = etAddress.getText().toString();
+                city = etCity.getText().toString();
+                College newCollege = new College(collegeName, address, city);
+                addCollege(newCollege);
+            }
+        });
+
+
        imgViewEdit.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
@@ -65,6 +82,36 @@ public class AddCollegeFragment extends Fragment {
            }
        });
         return rootView;
+    }
+
+    public void addCollege(College college){
+        if(collegeName.equals("")){
+            Toast.makeText(context, "Please enter college name", Toast.LENGTH_SHORT).show();
+        }else if(address.equals("")){
+            Toast.makeText(context, "Please enter address", Toast.LENGTH_SHORT).show();
+        }else if(city.equals("")){
+            Toast.makeText(context, "Please enter city", Toast.LENGTH_SHORT).show();
+        }else{
+            LDLService api = ApiClient.getApi().create(LDLService.class);
+            retrofit2.Call<College> call = api.addCollege("token " + User.getCurrentUser(getContext()).getToken(), college);
+            call.enqueue(new Callback<College>() {
+                @Override
+                public void onResponse(Call<College> call, Response<College> response) {
+                    Log.i("dsf", "post college: " + response.code());
+                    if (response.code() == 201) {
+                        Toast.makeText(getContext(), "College Added Successfully", Toast.LENGTH_SHORT).show();
+                    } else if (response.code() == 400) {
+                        Toast.makeText(getContext(), "College with this name already exists", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<College> call, Throwable t) {
+                    Log.i("dsf", " post error: " + t);
+
+                }
+            });
+        }
     }
 
     private void fetch_city(){
