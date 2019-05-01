@@ -20,7 +20,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="230dp"
         android:ems="10"
-        android:hint="Email Address"
+        android:hint="UserName"
         android:inputType="text"
         android:textColor="#ffffff" />
 
@@ -46,8 +46,8 @@
         android:layout_marginStart="146dp"
         android:layout_marginEnd="150dp"
         android:layout_marginBottom="65dp"
-        android:background="@color/design_default_color_primary"
-        android:text="Log In" />
+        android:background="@color/colorPrimary"
+        android:text="Log In"/>
 
     <TextView
         android:id="@+id/textView"
